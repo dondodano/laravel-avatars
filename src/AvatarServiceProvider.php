@@ -1,10 +1,10 @@
 <?php
 
-namespace TestQ\Avatars;
+namespace Dondodano\Avatars;
 
+use Dondodano\Avatars\Http\AvatarController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use TestQ\Avatars\Http\AvatarController;
 
 class AvatarServiceProvider extends ServiceProvider
 {

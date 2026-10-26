@@ -1,23 +1,61 @@
 {
-    "name": "testq/avatars",
-    "description": "Self-hosted initials avatar generator (SVG/PNG) with a ui-avatars.com compatible endpoint for Laravel.",
-    "keywords": ["laravel", "avatar", "initials", "ui-avatars"],
+    "name": "dondodano/laravel-avatars",
+    "description": "Self-hosted initials avatar generator (SVG/PNG) for Laravel, with a ui-avatars.com compatible endpoint.",
+    "type": "library",
+    "keywords": ["laravel", "avatar", "avatars", "initials", "ui-avatars", "svg", "png", "gd"],
     "license": "MIT",
+    "homepage": "https://github.com/dondodano/laravel-avatars",
+    "authors": [
+        {
+            "name": "Dondo Dano",
+            "homepage": "https://github.com/dondodano",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/dondodano/laravel-avatars/issues",
+        "source": "https://github.com/dondodano/laravel-avatars"
+    },
     "require": {
         "php": "^8.2",
         "ext-gd": "*",
         "ext-mbstring": "*",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/routing": "^11.0|^12.0",
         "illuminate/support": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.24",
+        "orchestra/testbench": "^9.0|^10.0",
+        "phpunit/phpunit": "^11.5"
     },
     "autoload": {
         "psr-4": {
-            "TestQ\\Avatars\\": "src/"
+            "Dondodano\\Avatars\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dondodano\\Avatars\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "format": "pint",
+        "format:check": "pint --test"
     },
     "extra": {
         "laravel": {
-            "providers": ["TestQ\\Avatars\\AvatarServiceProvider"]
+            "providers": [
+                "Dondodano\\Avatars\\AvatarServiceProvider"
+            ]
         }
     },
-    "minimum-stability": "stable"
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }

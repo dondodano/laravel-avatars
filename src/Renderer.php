@@ -1,6 +1,6 @@
 <?php
 
-namespace TestQ\Avatars;
+namespace Dondodano\Avatars;
 
 use GdImage;
 use RuntimeException;
