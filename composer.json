@@ -1,0 +1,23 @@
+{
+    "name": "testq/avatars",
+    "description": "Self-hosted initials avatar generator (SVG/PNG) with a ui-avatars.com compatible endpoint for Laravel.",
+    "keywords": ["laravel", "avatar", "initials", "ui-avatars"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "ext-gd": "*",
+        "ext-mbstring": "*",
+        "illuminate/support": "^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TestQ\\Avatars\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["TestQ\\Avatars\\AvatarServiceProvider"]
+        }
+    },
+    "minimum-stability": "stable"
+}
